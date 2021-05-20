@@ -7,8 +7,8 @@ We are creating this project to help people and also make the process of hiring 
 HelpMe will serve as a web page in which people can register and can be both an employee (the person who performs the services and jobs) and the client (the person who requests services and jobs). The aim of our project is to make the process of earning money for people, a lot more comfortable, and providing individuals services , which they are not capable of performing themselves. 
 
 ##### *Some of the techniques that will be used in the project :*
--Posting a service
--Applying for services, or denying/accepting the service application from employees
--Showing the location of the user
--Messaging the client/employee for more information regarding the service/job
+-Posting a service<br/>
+-Applying for services, or denying/accepting the service application from employees<br/>
+-Showing the location of the user<br/>
+-Messaging the client/employee for more information regarding the service/job<br/>
 -Online payment etc...
