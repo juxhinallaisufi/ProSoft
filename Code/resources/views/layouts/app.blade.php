@@ -21,79 +21,71 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
 </head>
-<body style="background-color: #3f3697">
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-transparent" >
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/homepage') }}" style="color: #f0ebcc;">
-                    {{ config('app.name', 'HelpMe!') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto" >
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}"style="color: #f0ebcc;">{{ __('Login') }} </a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                <button class="myButton">
-                                    <a class="nav-link" href="{{ route('register') }}"style="color: #f0ebcc;">{{ __('Register') }}</a>
-                                    </button>
-                                </li>
-                            @endif
-                        @else
-                            
-
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
+<body>
+    <section id="header">
+        <div id="app">
+            <nav class="navbar navbar-expand-lg fixed-top" >
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <i class="fas fa-bars" ></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top:20px">
+                        <ul class="navbar-nav mx-auto" >
+                            <li class="nav-item">
+                                <a class="nav-link" href="/homepage"style="color: #ff8303;margin:0 20px;font-size:25px">Home</a>
                             </li>
-                        @endguest
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"style="color: #f0ebcc;">About us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        
+                            <!-- Authentication Links -->
+                            @guest
+                                @if (Route::has('login'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}"style="color: #ff8303;margin:0 20px;font-size:25px">{{ __('Login') }} </a>
+                                    </li>
+                                @endif
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-    <div class="jumbotron">
-            <div class="container">
-                <h1>HelpMe!</h1>
-                <p>Get Paid Now</p>
-            </div>
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                    <button class="myButton">
+                                        <a class="nav-link" href="{{ route('register') }}"style="color: ff8303;margin:0 20px;font-size:25px">{{ __('Register') }}</a>
+                                        </button>
+                                    </li>
+                                @endif
+                            @else
+                                
+
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                    
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"style="color: #ff8303;margin:0 20px;font-size:25px">About us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
+    </section>
+    <div class="jumbotron text-center" style="background-image:url({{url('/images/hp2.jpg')}});background-size: cover;background-repeat: no-repeat;height: 80vh;color: #f0ebcc;border-radius: 0px !important;">
+        <div class="intro">
+            <img src="{{url('/images/logo2.png')}}" alt="logo" style="width:25%; height:25%"/>
+            <h1>Get Paid Now!</h1>
+        </div>
+    </div>
+
+      @yield('content')
 </body>
 </html>
