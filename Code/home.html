@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- Fontawesome-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
     <!-- External Css-->
     <link href="./css/homeStyle.css" rel="stylesheet">
     <!-- Google Fonts-->
@@ -18,24 +20,25 @@
     <title>HelpMe!</title>
   </head>
   <body>
+
       <section id="header">
         <nav class="navbar navbar-expand-lg fixed-top">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+                <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav mx-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="./login.html">Login</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="./register.html">Register</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About us</a>
+                    <a class="nav-link" href="#aboutUs">About us</a>
                   </li>
                 </ul>
               </div>
@@ -43,9 +46,18 @@
       </section>
       <div class="jumbotron text-center">
           <div class="intro">
-              <img src="./images/logo2.png" alt="logo">
-              <h1>Get Paid Now!</h1>
+              <b><img src="./images/logo2.png" alt="logo"></b>
+              <h1><a href="./login.html">Get Paid Now!</a></h1>
           </div>
+      </div>
+      <div class="info">
+        <h1>What is the purpose?</h1>
+        <p>HelpMe will serve as a web page in which people can register and can be both an employee (the person who performs the services and jobs) and the client (the person who requests services and jobs). The aim of our project is to make the process of earning money for people, a lot more comfortable, and providing individuals services, which they are not capable of performing themselves.</p>
+      </div>
+      <div class="info2">
+        <span id="aboutUs"></span>
+        <h1>Who are we?</h1>
+        <p>We are six Computer Engineering student who aspire to make a change in the world. Our first project aims to help people in need and we think this is a small step to in our bright future.</p>
       </div>
 
     

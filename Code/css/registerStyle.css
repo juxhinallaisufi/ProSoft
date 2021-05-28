@@ -1,0 +1,17 @@
+body{
+    background-image: url(../images/rbg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#ui{
+    background-color: #126e82;
+    padding: 30px;
+    margin-top: 90px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+#ui label,h1{
+    color: white;
+}
