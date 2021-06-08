@@ -36,8 +36,10 @@
               <h1 class="brand">HelpMe</h1>
               <div class="sidebar-menu">
                   <div class="sidebar-menu__item">
+                    <a href="./profile.html">
                       <img src="./svg/user.svg" class="sidebar-menu__item-icon">
                       Profile
+                    </a>
                   </div>
                   <div class="sidebar-menu__item">
                     <img src="./svg/messages.svg" class="sidebar-menu__item-icon">
@@ -52,7 +54,7 @@
                     History
                 </div>
                 <div class="sidebar-menu__item">
-                  <button class="create">
+                  <button class="create" id="create">
                     <img src="./svg/add.svg" class="sidebar-menu__item-icon" id="add">
                     Create
                   </button>
@@ -218,5 +220,74 @@
           </div>
       </div>
       
+
+      <div id="myModal" class="modal">
+
+        <div class="container">
+           
+                   
+           <form action="" method="POST" class="login-email">
+               <div>
+                   <p class="login-text" style="font-size: 2rem; font-weight: 800;">Create <span class="close">&times;</span> </p>
+               </div>
+               <div class="input-group">
+                   <input type="text" placeholder="Title" name="title" required>
+               </div>
+       
+               <div class="input-group">
+                   <input type="text" placeholder="Description" name="description" required>
+               </div>
+       
+               <div class="input-group">
+                   <input type="text" placeholder="Location" name="location" required>
+               </div>
+       
+                 <div class="input-group">
+                   <input type="number" placeholder="Price" name="price" id="price"  required>
+               </div>
+       
+               <div class="input-group">
+
+                <select name="filter" id="type" required>
+                  <option value="jobs">Job</option>
+                  <option value="service">Service</option>
+                </select>
+               </div>
+               <div class="input-group">
+                   <button name="submit" class="btn">Create</button>
+               </div>
+           </form>
+           
+       </div> 
+       
+       </div>   
+           
+       <script>
+       // Get the modal
+       var modal = document.getElementById("myModal");
+       
+       // Get the button that opens the modal
+       var btn = document.getElementById("create");
+       
+       // Get the <span> element that closes the modal
+       var span = document.getElementsByClassName("close")[0];
+       
+       // When the user clicks the button, open the modal 
+       btn.onclick = function() {
+         modal.style.display = "block";
+       }
+       
+       // When the user clicks on <span> (x), close the modal
+       span.onclick = function() {
+         modal.style.display = "none";
+       }
+       
+       // When the user clicks anywhere outside of the modal, close it
+       window.onclick = function(event) {
+         if (event.target == modal) {
+           modal.style.display = "none";
+         }
+       }
+       </script>
 </body>
 </html>
