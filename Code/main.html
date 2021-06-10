@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <title>Main Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Lobster&family=Mukta:wght@300&display=swap" rel="stylesheet">
+<title>Main Page</title>
 </head>
-<body>
+<body style="background-color: #deedf0;">
      <section id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <span class="navbar-text">
                     Welcome, {Emer Mbiemer}!
@@ -33,8 +35,8 @@
       </section>
       <div class="layout">
           <div class="layout__left-sidebar">
-              <h1 class="brand">HelpMe</h1>
               <div class="sidebar-menu">
+                <h1 class="brand">HelpMe</h1>
                   <div class="sidebar-menu__item">
                     <a href="./profile.html">
                       <img src="./svg/user.svg" class="sidebar-menu__item-icon">
@@ -76,9 +78,11 @@
                     <div class="posts__author-time">
                       9h ago
                     </div>
+                    <hr>
                     <div class="posts__content">
                       Kam nevoje per te nderruar gomen e makines. Mjetet i kam me vete por nuk di si ti nderroj.
                     </div>
+                    <hr>
                     <div class="posts__price">
                       Price: 500ALL
                     </div>
@@ -109,9 +113,11 @@
                 <div class="posts__author-time">
                   7h ago
                 </div>
+                <hr>
                 <div class="posts__content">
                   Jam e paralizuar dhe nuk mundem te bej pazarin. Kuota e pazarit eshte 1000 leke.
                 </div>
+                <hr>
                 <div class="posts__price">
                   Price: 500ALL
                 </div>
@@ -142,9 +148,11 @@
                 <div class="posts__author-time">
                   39m ago
                 </div>
+                <hr>
                 <div class="posts__content">
                   Kerkohet nje Junior developer. Te kete mbaruar Bachelorin dhe te kete pasion per te punuar ne grup.
                 </div>
+                <hr>
                 <div class="posts__price">
                   Price: 45000ALL/muaj
                 </div>
@@ -167,7 +175,7 @@
               <div class="layout__right-sidebar">
                 <div class="bonding-time">
                     <div class="bonding-time__heading">
-                      Bonding Time
+                      <h2>Bonding Time</h2> 
                   </div>
 
                   <div class="bonding-time__block">
@@ -228,16 +236,15 @@
                    
            <form action="" method="POST" class="login-email">
                <div>
-                   <p class="login-text" style="font-size: 2rem; font-weight: 800;">Create <span class="close">&times;</span> </p>
+                   <p class="login-text" style="font-size: 2rem; font-weight: 500;">Create <span class="close">&times;</span> </p>
                </div>
                <div class="input-group">
                    <input type="text" placeholder="Title" name="title" required>
                </div>
-       
+                
                <div class="input-group">
-                   <input type="text" placeholder="Description" name="description" required>
+                  <textarea name="bio" rows="4" cols="50" placeholder="Description" required></textarea>
                </div>
-       
                <div class="input-group">
                    <input type="text" placeholder="Location" name="location" required>
                </div>
