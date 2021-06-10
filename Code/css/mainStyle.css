@@ -62,7 +62,7 @@ background: linear-gradient(0deg, rgba(222,237,240,1) 0%, rgba(237,252,255,1) 10
     font-weight: 600;
 }
 .bond:active{
-  transform: translateY(4px);;
+  transform: translateY(4px);
 }
 
 .brand{
@@ -130,6 +130,17 @@ margin-right: 5px;
 hr{
   width: 30%;
   border: 1px double;
+}
+.logout{
+    background: transparent;
+    color: black;
+    border-radius: 7px;
+    border: solid black 2px;
+    font-weight: 600;
+
+}
+.logout:active{
+  transform: translateY(4px);
 }
 .posts__author-time{
   color: #657786;
