@@ -52,11 +52,14 @@
             <div class="payment showtab">
                 <h1>Payment</h1>
                 <h2>Payment Method</h2>
-                <input type="text" class="input" value="Mastercard 8226 **** **** 7759">
-                <h2>Billing address</h2>
-                <input type="text" class="input" value="Lagja 5 Rruga filan fisteku">
-                <h2>Zipcode</h2>
-                <input type="email" class="input" value="20005">
+                <input type="text" class="input" value="8226 **** **** 7759">
+                <h2>CVV</h2>
+                <input type="number" class="input" id="num" value="200" min="0" max="999" required>
+                <h2>MM</h2>
+                <input type="number" class="input" id="num" value="02" min="0" max="99" required>
+                <h2>YY</h2>
+                <input type="number" class="input" id="num" value="20" min="0" max="99" required>
+                
                 <button class="btn">Save Changes</button>
             </div>
 
