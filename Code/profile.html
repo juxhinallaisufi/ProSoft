@@ -1,87 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html>
+    <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/profileStyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        <title>Profile</title>
+        <link rel="stylesheet" href="./css/profile.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap"
-        rel="stylesheet">
-    <title>Profile</title>
-</head>
-
-<body>
-    <div class="container">
-        <div class="leftbox">
-            <nav>
-                <a onclick="tabs(0)" class="tab active">
-                    <i class="fas fa-user"></i>
-                </a>
-                <a onclick="tabs(1)" class="tab">
-                    <i class="far fa-credit-card"></i>
-                </a>
-            </nav>
-        </div>
-        <div class="rightbox">
-            <div class="profile showtab">
-                <h1>Personal Info</h1>
-                <h2>First Name</h2>
-                <input type="text" class="input" value="Jane">
-                <h2>Last Name</h2>
-                <input type="text" class="input" value="Doe">
-                <h2>Email</h2>
-                <input type="email" class="input" value="janedoe@gmail.com">
-                <h2>Phone Numbers</h2>
-                <input type="tel" class="input" value="0682065325" pattern="[+]{1}[0-9]{11,14}" id="phone">
-                <h2>Password</h2>
-                <input type="password" class="input" value="123">
-                <h2>Bio</h2>
-                <textarea name="bio" rows="4" cols="50">
-                  Lorem Ipsum
-                </textarea>
-                <button class="btn">Save Changes</button>
-
+    </head>
+    
+    <body>
+    
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="./images/User-Profile.png" width="200" alt="">
+                </div>
+                <div class="profile-nav-info">
+                    <h3 class="user-name">Filan Fisteku</h3>
+                    <div class="joined-date">
+                        <spin class="joined"> Joined date: 10/06/2021</spin>
+                    </div>
+                </div>
+                <div class="profile-option">
+                    <div class="notifications">
+                        <i class="fa fa-bell"></i>
+                    </div>
+                </div>
             </div>
-            <div class="payment showtab">
-                <h1>Payment</h1>
-                <h2>Payment Method</h2>
-                <input type="text" class="input" value="8226 **** **** 7759">
-                <h2>CVV</h2>
-                <input type="number" class="input" id="num" value="200" min="0" max="999" required>
-                <h2>MM</h2>
-                <input type="number" class="input" id="num" value="02" min="0" max="99" required>
-                <h2>YY</h2>
-                <input type="number" class="input" id="num" value="20" min="0" max="99" required>
-                
-                <button class="btn">Save Changes</button>
+            <div class="main-bd">
+                <div class="left-side">
+                    <div class="profile-side">
+                        <div class="btn">
+                        <i class="fa fa-file-image-o fa-lg"></i></div>
+                        <br/>
+                        <p class="mobile-no fa fa-phone">
+                        <i>+ 29495940</i></p>
+                        <br/>
+                        <p class="user-mail fa fa-envelope">
+                        <i>Bali12@gmail.com</i></p>
+                        <div class="user-id">
+                            <p class="id">ID: BR32002011 </p>
+                        </div>
+                        <div class="user-bio">
+                            <p class="bio">Bio: This is the bio</p>
+                        </div>
+                        <div class="user-int">
+                            <p class="interests">Interests: #money #kids #painting #DIY #art #design</p>
+                        </div>
+                        <div class="profile-btn">
+                        <button class="chat-btn">
+                        <i class="fa fa-comment"></i>Messages   
+                        </button>
+                        <button class="edit-profile">
+                            <i class="fa fa-edit"></i>Edit profile   
+                        </button>
+                        </div>
+                        <div class="user-rating">
+                        <h3 class="rating">4.5</h3>
+                        <div class="rate">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <span class="no-user"> <span>123</span>
+                            &nbsp;&nbsp; reviews</span>
+                        </div>
+                    </div>     
+                </div>
             </div>
-
+            <div class="right-side">
+                <div class="nav">
+                    <ul>
+                        <li onclick="tabs(0)" class="tab active">Jobs</li>
+                        <li onclick="tabs(1)" class="tab user-services">Services</li>
+                        <li onclick="tabs(2)" class="tab cv">CV</li>
+                    </ul>
+                </div>
+                <div class="profile-body">
+                    <div class="job showtab">
+                        <h1 >Jobs you have posted:</h1>
+                        <p>The jobs will be posted here</p><br/>
+                         <h1 class="h2">Jobs you have applied:</h1>
+                        <p>The jobs will be posted here</p>
+                        
+                    </div>
+                    <div class="service showtab">
+                        <h1>Services you have posted:</h1>
+                        <p>Services will be posted here:</p>
+                        <br/>
+                        <h1 class="h2">Services you have applied:</h1>
+                        <p>Services will be posted here:
+                        </p>
+                    </div>
+                    <div class="CV showtab">
+                        <h1>Your CV:</h1>
+                        <br/>
+                        <button class="button cv">upload CV</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <script>
-        const tabBtn = document.querySelectorAll(".tab");
-        const tab = document.querySelectorAll(".showtab");
+        </div>
+        
+        <script>
+            $(".nav tab").click(function() {
+                $(this).addClass("active").siblings().removeClass("active");
+            })
+        </script>
+        
+        <script>
 
-        function tabs(panelIndex) {
-            tab.forEach(function (node) {
-                node.style.display = "none";
-            });
-            tab[panelIndex].style.display = "block";
-        }
-        tabs(0)
-    </script>
-    <script>
-        $(".tab").click(function () {
-            $(this).addClass("active").siblings().removeClass("active")
-        })
-    </script>
-</body>
-
+             const tabBtn = document.querySelectorAll(".tab");
+            const tab = document.querySelectorAll(".showtab");
+            function tabs(panelIndex) {
+                tab.forEach(function(node) {
+                    node.style.display = "none";
+                })
+                tab[panelIndex].style.display = "block";
+            }
+            tabs(0);
+        </script>
+    </body>
 </html>
