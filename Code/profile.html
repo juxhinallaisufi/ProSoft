@@ -1,0 +1,127 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <title>Profile</title>
+        <link rel="stylesheet" href="./css/profile.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+    
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="./images/User-Profile.png" width="200" alt="">
+                </div>
+                <div class="profile-nav-info">
+                    <h3 class="user-name">Filan Fisteku</h3>
+                    <div class="joined-date">
+                        <spin class="joined"> Joined date: 10/06/2021</spin>
+                    </div>
+                </div>
+                <div class="profile-option">
+                    <div class="notifications">
+                        <i class="fa fa-bell"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="main-bd">
+                <div class="left-side">
+                    <div class="profile-side">
+                        <div class="btn">
+                        <i class="fa fa-file-image-o fa-lg"></i></div>
+                        <br/>
+                        <p class="mobile-no fa fa-phone">
+                        <i>+ 29495940</i></p>
+                        <br/>
+                        <p class="user-mail fa fa-envelope">
+                        <i>Bali12@gmail.com</i></p>
+                        <div class="user-id">
+                            <p class="id">ID: BR32002011 </p>
+                        </div>
+                        <div class="user-bio">
+                            <p class="bio">Bio: This is the bio</p>
+                        </div>
+                        <div class="user-int">
+                            <p class="interests">Interests: #money #kids #painting #DIY #art #design</p>
+                        </div>
+                        <div class="profile-btn">
+                        <button class="chat-btn">
+                        <i class="fa fa-comment"></i>Messages   
+                        </button>
+                        <button class="edit-profile">
+                            <i class="fa fa-edit"></i>Edit profile   
+                        </button>
+                        </div>
+                        <div class="user-rating">
+                        <h3 class="rating">4.5</h3>
+                        <div class="rate">
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <span class="no-user"> <span>123</span>
+                            &nbsp;&nbsp; reviews</span>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="nav">
+                    <ul>
+                        <li onclick="tabs(0)" class="tab active">Jobs</li>
+                        <li onclick="tabs(1)" class="tab user-services">Services</li>
+                        <li onclick="tabs(2)" class="tab cv">CV</li>
+                    </ul>
+                </div>
+                <div class="profile-body">
+                    <div class="job showtab">
+                        <h1 >Jobs you have posted:</h1>
+                        <p>The jobs will be posted here</p><br/>
+                         <h1 class="h2">Jobs you have applied:</h1>
+                        <p>The jobs will be posted here</p>
+                        
+                    </div>
+                    <div class="service showtab">
+                        <h1>Services you have posted:</h1>
+                        <p>Services will be posted here:</p>
+                        <br/>
+                        <h1 class="h2">Services you have applied:</h1>
+                        <p>Services will be posted here:
+                        </p>
+                    </div>
+                    <div class="CV showtab">
+                        <h1>Your CV:</h1>
+                        <br/>
+                        <button class="button cv">upload CV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <script>
+            $(".nav tab").click(function() {
+                $(this).addClass("active").siblings().removeClass("active");
+            })
+        </script>
+        
+        <script>
+
+             const tabBtn = document.querySelectorAll(".tab");
+            const tab = document.querySelectorAll(".showtab");
+            function tabs(panelIndex) {
+                tab.forEach(function(node) {
+                    node.style.display = "none";
+                })
+                tab[panelIndex].style.display = "block";
+            }
+            tabs(0);
+        </script>
+    </body>
+</html>
